@@ -1,0 +1,58 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #081826;
+    color: #f5f5f5;
+    font-family: Georgia, serif;
+}
+.hero {
+    min-height: 100vh;
+    padding: 40px 8%;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: #d4af37;
+    font-size: 32px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 40px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: .3s;
+}
+
+nav a:hover {
+    color: #d4af37;
+}
+<section class="hero-content">
+
+    <p class="eyebrow">EXECUTIVE TELECOMMUNICATIONS STRATEGY</p>
+
+    <h1>
+        Transforming Complex Infrastructure into Strategic Business Advantage.
+    </h1>
+
+    <p class="hero-text">
+        North Velocity Group helps organizations reduce costs, modernize telecommunications infrastructure, mitigate operational risk, and develop executive-level technology strategies.
+    </p>
+
+</section>
