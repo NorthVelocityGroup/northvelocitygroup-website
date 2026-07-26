@@ -30,7 +30,7 @@
       <a href="industries.html">Industries</a>
       <a href="about.html">About</a>
       <a href="contact.html">Contact</a>
-      <a href="contact.html" class="btn btn-solid" style="margin-left:8px;">Schedule a Consultation</a>
+
     </nav>
     <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
@@ -67,12 +67,8 @@
 <!-- ============ WHAT WE DO (overview) ============ -->
 <section id="services" class="section">
   <div class="wrap">
-    <div class="section-head reveal" style="display:flex; justify-content:space-between; align-items:flex-end; gap:24px; flex-wrap:wrap;">
-      <div>
-        <p class="eyebrow">What We Do</p>
-        <h2 class="h2">From clarity to execution, on one engagement.</h2>
-      </div>
-      <a href="what-we-do.html" class="btn btn-ghost">View Full Practice<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    <div class="section-head reveal">
+      <h2 class="h2">From clarity to execution, on one engagement.</h2>
     </div>
     <div class="service-grid four-col">
       <div class="service-card reveal">        <h3>Executive Assessment &amp; Advisory</h3>
@@ -88,15 +84,6 @@
         <p>We evaluate process, governance, technology, vendor relationships, and AI readiness to surface operational risk and opportunity.</p>
       </div>
     </div>
-  </div>
-</section>
-
-<!-- ============ GLOBAL INTELLIGENCE ============ -->
-<section class="section global-section">
-  <div class="wrap global-inner reveal">
-    <p class="eyebrow">We Don't Benchmark Against One Market</p>
-    <h2 class="h2">Global Intelligence.</h2>
-    <p class="body-lg">We continuously evaluate emerging technologies, AI, operational strategy, governance, and enterprise transformation across global markets — helping clients identify proven innovations, anticipate change, and apply the right solutions with confidence.</p>
   </div>
 </section>
 
@@ -160,15 +147,7 @@
       </div>
     </div>
     <div class="philosophy-art reveal">
-      <svg viewBox="0 0 400 460" fill="none">
-        <rect width="400" height="460" fill="#102844"/>
-        <g stroke="#B08D57" stroke-opacity="0.55">
-          <circle cx="200" cy="140" r="60"/>
-          <circle cx="200" cy="140" r="30"/>
-        </g>
-        <path d="M120 320 L170 260 L220 300 L280 220 L340 260" stroke="#D8BE8F" stroke-width="1.4" fill="none"/>
-        <line x1="60" y1="400" x2="340" y2="400" stroke="#B08D57" stroke-opacity="0.7"/>
-      </svg>
+      <img src="PhilosophyImage.png" alt="Complexity resolving into aligned operational intelligence" />
     </div>
   </div>
 </section>
@@ -308,7 +287,8 @@
 .belief-block{ margin-top:36px; padding-top:28px; border-top:1px solid var(--line); }
 .belief-line{ font-family:var(--font-display); font-style:italic; font-size:26px; color:var(--gold-light); max-width:440px; }
 .principles{ margin-top:14px; font-family:var(--font-mono); font-size:12px; letter-spacing:0.18em; text-transform:uppercase; color:var(--silver); }
-.philosophy-art{ border:1px solid var(--line-soft); }
+.philosophy-art{ border:1px solid var(--line-soft); overflow:hidden; }
+.philosophy-art img{ width:100%; height:100%; object-fit:cover; display:block; }
 
 .industries-section{ background:var(--navy-deep); }
 .industry-grid{ display:grid; grid-template-columns:repeat(6,1fr); gap:1px; background:var(--line-soft); border:1px solid var(--line-soft); }
