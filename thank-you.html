@@ -3,7 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Contact — North Velocity Group</title>
+<title>Thank You — North Velocity Group</title>
+<meta name="description" content="Thanks for reaching out to North Velocity Group. A member of our team will follow up within three business days.">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -37,52 +38,21 @@
   </div>
 </header>
 
-<section class="page-hero">
+<section class="page-hero thank-you-hero">
   <div class="wrap reveal">
-    <p class="eyebrow">Let's Connect</p>
-    <h1 class="page-h1">Let's move your mission forward.</h1>
-    <p class="page-sub">Tell us about the challenge — technology, governance, operations, or growth — and a member of our team will follow up within three business days.</p>
-  </div>
-</section>
-
-<section class="section contact-section">
-  <div class="wrap contact-grid">
-    <!--
-      This form submits to FormSubmit, a form-forwarding service — no backend required.
-      Submissions are emailed to pen.vanburen@gmail.com.
-      IMPORTANT: the first submission triggers a one-time confirmation email to that
-      inbox — it must be clicked to activate delivery. Once northvelocitygroup.com
-      email is live, swap the address below for the permanent one.
-    -->
-    <form class="contact-form" id="contactForm" action="https://formsubmit.co/pen.vanburen@gmail.com" method="POST">
-      <input type="hidden" name="_subject" value="New inquiry — North Velocity Group website">
-      <input type="hidden" name="_template" value="table">
-      <input type="hidden" name="_captcha" value="false">
-      <input type="hidden" name="_next" value="https://northvelocitygroup.com/thank-you.html">
-      <input type="text" name="_honey" style="display:none">
-
-      <div class="form-row">
-        <label>Full Name
-          <input type="text" name="Full Name" required>
-        </label>
-        <label>Company
-          <input type="text" name="Company" required>
-        </label>
-      </div>
-      <div class="form-row">
-        <label>Email Address
-          <input type="email" name="Email" required>
-        </label>
-        <label>Phone <span class="opt">(optional)</span>
-          <input type="tel" name="Phone">
-        </label>
-      </div>
-      <label>How can we help?
-        <textarea name="Message" rows="5" required placeholder="A sentence or two on what you're working through is plenty to start."></textarea>
-      </label>
-      <button type="submit" class="btn btn-solid">Send Message<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
-      <p class="form-note">Sent directly to our team. We reply within three business days.</p>
-    </form>
+    <div class="thank-you-mark" aria-hidden="true">
+      <svg viewBox="0 0 60 60" fill="none">
+        <circle cx="30" cy="30" r="28" stroke="#B08D57" stroke-width="1.4"/>
+        <path d="M18 31 L26 39 L43 20" stroke="#B08D57" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+    <p class="eyebrow">Message Received</p>
+    <h1 class="page-h1">Thank you for reaching out.</h1>
+    <p class="page-sub">Your message has been sent to our team. We review every inquiry personally and will follow up within three business days.</p>
+    <div class="hero-cta" style="margin-top:36px;">
+      <a href="index.html" class="btn btn-solid">Back to Home<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <a href="what-we-do.html" class="btn btn-ghost">Explore Our Practice</a>
+    </div>
   </div>
 </section>
 
@@ -134,37 +104,11 @@
 .page-hero{ padding:160px 0 80px; border-bottom:1px solid var(--line-soft); }
 .page-h1{ font-size:clamp(40px,5.4vw,66px); color:var(--stone); margin-top:18px; max-width:760px; }
 .page-sub{ max-width:560px; margin-top:22px; color:var(--silver); font-size:16px; }
-
-.section{ padding:100px 0; }
-.contact-grid{ max-width:640px; }
-
-.contact-form{ display:flex; flex-direction:column; gap:24px; }
-.form-row{ display:grid; grid-template-columns:1fr 1fr; gap:24px; }
-label{ display:flex; flex-direction:column; gap:8px; font-family:var(--font-mono); font-size:11px; letter-spacing:0.1em; text-transform:uppercase; color:var(--gold); }
-.opt{ text-transform:none; letter-spacing:0; color:var(--silver); font-family:var(--font-body); }
-input, textarea{
-  background:transparent;
-  border:none;
-  border-bottom:1px solid var(--line-soft);
-  padding:10px 2px;
-  color:var(--stone);
-  font-family:var(--font-body);
-  font-size:15px;
-  transition:border-color .2s ease;
-  resize:vertical;
-}
-input:focus, textarea:focus{ border-color:var(--gold); outline:none; }
-.contact-form .btn{ align-self:flex-start; margin-top:8px; border:none; }
-.form-note{ font-family:var(--font-body); font-size:13px; color:rgba(200,205,211,0.55); text-transform:none; letter-spacing:0; }
-
-.contact-info{ display:flex; flex-direction:column; gap:22px; }
-.info-block p{ margin-top:10px; font-size:14px; color:var(--silver); line-height:1.7; }
-.info-block a{ color:var(--stone); }
-.info-block a:hover{ color:var(--gold-light); }
-
-@media (max-width:900px){
-  .form-row{ grid-template-columns:1fr; }
-}
+.thank-you-hero{ text-align:center; min-height:70vh; display:flex; align-items:center; }
+.thank-you-hero .wrap{ display:flex; flex-direction:column; align-items:center; }
+.thank-you-hero .page-sub{ margin-left:auto; margin-right:auto; }
+.thank-you-mark{ width:60px; height:60px; margin-bottom:24px; }
+.hero-cta{ display:flex; gap:16px; flex-wrap:wrap; justify-content:center; }
 </style>
 
 <script>
