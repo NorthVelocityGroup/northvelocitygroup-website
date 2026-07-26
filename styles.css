@@ -141,6 +141,7 @@ button{ font-family:inherit; }
   }
   .nav-links.open{ opacity:1; visibility:visible; transform:none; }
   .nav-links a{ width:100%; padding:16px 0; border-bottom:1px solid var(--line-soft); background-color:#070C15; }
+  .nav-links a.nav-cta{ display:none; }
   .nav-links a.btn{ margin:16px 0 0 !important; justify-content:center; }
 }
 
