@@ -55,6 +55,15 @@
 </section>
 
 <section class="section contact-section">
+  <div class="wrap">
+    <div class="briefing-card reveal">
+      <p class="eyebrow">Prefer to pick a time now?</p>
+      <h2 class="briefing-h2">The Preliminary Briefing</h2>
+      <p class="briefing-copy">A focused conversation to understand your objectives and determine whether North Velocity Group is the right partner to advance them. No cost, no obligation.</p>
+      <a href="https://outlook.office.com/book/NorthVelocityGroupConsultsTransform@northvelocitygroup.com/s/rLBbb54EGkO3RI1X0S5dfQ2" target="_blank" rel="noopener" class="btn btn-solid">Book the Briefing<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <p class="briefing-or">Or, if you'd rather write first, share a few details below and we'll follow up to find a time that works.</p>
+    </div>
+  </div>
   <div class="wrap contact-grid">
     <!--
       This form submits to FormSubmit, a form-forwarding service — no backend required.
@@ -128,7 +137,7 @@
       </div>
       <div class="footer-col">
         <h5>Connect</h5>
-        <ul><li><a href="contact.html">Schedule a Consultation</a></li><li><a href="#">LinkedIn</a></li><li><a href="mailto:hello@northvelocitygroup.com">Email</a></li></ul>
+        <ul><li><a href="contact.html">Schedule a Consultation</a></li><li><a href="#">LinkedIn</a></li></ul>
       </div>
     </div>
     <div class="hairline"></div>
@@ -147,6 +156,18 @@
 .section{ padding:100px 0; }
 .contact-grid{ max-width:640px; }
 
+.briefing-card{
+  background:var(--navy-deep);
+  border:1px solid var(--line-soft);
+  padding:40px 44px;
+  margin-bottom:56px;
+}
+.briefing-h2{ font-size:26px; color:var(--stone); margin:10px 0 14px; }
+.briefing-copy{ font-size:15px; line-height:1.8; color:var(--silver); max-width:600px; margin:0 0 24px; }
+.briefing-or{ font-family:var(--font-body); font-size:13px; color:rgba(200,205,211,0.55); margin:20px 0 0; }
+@media (max-width:640px){
+  .briefing-card{ padding:32px 24px; }
+}
 .contact-form{ display:flex; flex-direction:column; gap:24px; }
 .form-row{ display:grid; grid-template-columns:1fr 1fr; gap:24px; }
 label{ display:flex; flex-direction:column; gap:8px; font-family:var(--font-mono); font-size:11px; letter-spacing:0.1em; text-transform:uppercase; color:var(--gold); }
