@@ -62,18 +62,21 @@
       <h2 class="briefing-h2">The Preliminary Briefing</h2>
       <p class="briefing-copy">A focused conversation to understand your objectives and determine whether North Velocity Group is the right partner to advance them. No cost, no obligation.</p>
       <a href="https://outlook.office.com/book/NorthVelocityGroupConsultsTransform@northvelocitygroup.com/s/rLBbb54EGkO3RI1X0S5dfQ2" target="_blank" rel="noopener" class="btn btn-solid">Book the Briefing<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-      <p class="briefing-or">Or, if you'd rather write first, share a few details below and we'll follow up to find a time that works.</p>
-    </div>
-  </div>
-  <div class="wrap contact-grid">
-    <!--
-      This form submits to FormSubmit, a form-forwarding service — no backend required.
-      Submissions are emailed to pen.vanburen@gmail.com.
-      IMPORTANT: the first submission triggers a one-time confirmation email to that
-      inbox — it must be clicked to activate delivery. Once northvelocitygroup.com
-      email is live, swap the address below for the permanent one.
-    -->
-    <form class="contact-form" id="contactForm" action="https://formsubmit.co/fefd0d2fb4afcdee68cf9e70d8ebda6c" method="POST">
+
+      <div class="briefing-divider">
+        <span>Or</span>
+      </div>
+
+      <p class="briefing-or">If you'd rather write first, share a few details below and we'll follow up to find a time that works.</p>
+
+      <!--
+        This form submits to FormSubmit, a form-forwarding service — no backend required.
+        Submissions are emailed to pen.vanburen@gmail.com.
+        IMPORTANT: the first submission triggers a one-time confirmation email to that
+        inbox — it must be clicked to activate delivery. Once northvelocitygroup.com
+        email is live, swap the address below for the permanent one.
+      -->
+      <form class="contact-form" id="contactForm" action="https://formsubmit.co/fefd0d2fb4afcdee68cf9e70d8ebda6c" method="POST">
       <input type="hidden" name="_subject" value="New inquiry — North Velocity Group website">
       <input type="hidden" name="_template" value="table">
       <input type="hidden" name="_captcha" value="false">
@@ -102,6 +105,7 @@
       <button type="submit" class="btn btn-solid">Send Message<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
       <p class="form-note">Sent directly to our team. We reply within three business days.</p>
     </form>
+    </div>
   </div>
 </section>
 
@@ -160,12 +164,20 @@
 .briefing-card{
   background:var(--navy-deep);
   border:1px solid var(--line-soft);
-  padding:40px 44px;
-  margin-bottom:56px;
+  padding:48px 56px;
+  max-width:720px;
+  margin:0 auto;
 }
 .briefing-h2{ font-size:26px; color:var(--stone); margin:10px 0 14px; }
-.briefing-copy{ font-size:15px; line-height:1.8; color:var(--silver); max-width:600px; margin:0 0 24px; }
-.briefing-or{ font-family:var(--font-body); font-size:13px; color:rgba(200,205,211,0.55); margin:20px 0 0; }
+.briefing-copy{ font-size:15px; line-height:1.8; color:var(--silver); max-width:600px; margin:0 0 28px; }
+.briefing-divider{
+  display:flex; align-items:center; gap:16px;
+  margin:40px 0 24px;
+  color:var(--gold);
+  font-family:var(--font-mono); font-size:11px; letter-spacing:0.1em; text-transform:uppercase;
+}
+.briefing-divider::before, .briefing-divider::after{ content:''; flex:1; height:1px; background:var(--line-soft); }
+.briefing-or{ font-family:var(--font-body); font-size:14px; color:rgba(200,205,211,0.65); margin:0 0 28px; }
 @media (max-width:640px){
   .briefing-card{ padding:32px 24px; }
 }
