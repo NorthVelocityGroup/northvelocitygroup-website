@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>When AI Agents Get Write Access: The File Integrity Risk Hiding in Claude Cowork — North Velocity Group</title>
+<meta name="description" content="AI agents are moving from answering questions to modifying files, systems, and records. Publicly reported Cowork bugs on Windows and OneDrive show why enterprises need to govern AI write access as a privileged capability.">
+<link rel="stylesheet" href="../styles.css">
+</head>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ERXW3HYGB2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-ERXW3HYGB2');
+</script>
+<body>
+
+<header class="site-nav">
+  <div class="wrap">
+    <a href="/" class="brand">
+      <svg viewBox="0 0 100 100" fill="none">
+        <circle cx="50" cy="50" r="30" stroke="#B08D57" stroke-width="1.6"/>
+        <path d="M50 6 L54 30 L50 34 L46 30 Z" fill="#B08D57"/>
+        <path d="M50 94 L54 75 L50 71 L46 75 Z" fill="#B08D57"/>
+        <path d="M6 50 L30 46 L34 50 L30 54 Z" fill="#B08D57"/>
+        <path d="M94 50 L70 46 L66 50 L70 54 Z" fill="#B08D57"/>
+        <text x="50" y="49" text-anchor="middle" font-family="Playfair Display, serif" font-size="22" fill="#F5F1EA">N</text>
+        <line x1="40" y1="57" x2="60" y2="57" stroke="#B08D57" stroke-width="1"/>
+        <text x="50" y="67" text-anchor="middle" font-family="Playfair Display, serif" font-size="11" letter-spacing="1.5" fill="#B08D57">VG</text>
+      </svg>
+      <span class="brand-word">NORTH VELOCITY GROUP</span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="/">Home</a>
+      <a href="/what-we-do.html">What We Do</a>
+      <a href="/industries.html">Industries</a>
+      <a href="/insights.html">Insights</a>
+      <a href="/about.html">About</a>
+      <a href="/contact.html">Contact</a>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 6h18M3 18h18M3 12h18"/></svg>
+    </button>
+  </div>
+</header>
+
+<article class="article-single">
+  <div class="wrap">
+    <div class="article-head">
+      <p class="eyebrow">Governance & Risk</p>
+      <h1>When AI Agents Get Write Access: The File Integrity Risk Hiding in Claude Cowork</h1>
+    </div>
+
+    <div class="article-body">
+      <p>AI agents are moving beyond answering questions.</p>
+
+      <p>They are increasingly being given permission to read, create, modify, and delete files. That changes the risk.</p>
+
+      <p>Claude Cowork is a useful example. Anthropic explicitly states that Cowork can read, write, and permanently delete files in connected folders. Anthropic also acknowledges that write tools carry greater risk because Claude can make mistakes, and recommends dedicated working folders, backups, and increased human oversight for high-stakes work.</p>
+
+      <p>That guidance matters because public reports in Anthropic's own Claude Code repository document file-integrity problems involving Cowork, including Windows and OneDrive scenarios.</p>
+
+      <p>One report, GitHub issue #53940, describes Cowork's Edit and Write tools silently truncating files on Windows. The report includes controlled reproductions and describes situations where the tool reported success even though content had been lost. The issue is specifically labeled as a Windows Cowork bug.</p>
+
+      <p>Another report, GitHub issue #62140, describes a Windows and OneDrive Files-On-Demand scenario in which Cowork allegedly operates against a local placeholder rather than the complete cloud file. The reported result is potentially serious: an incomplete representation can be written back over the full file, resulting in silent data loss.</p>
+
+      <p>These are bug reports, not evidence that every Cowork user will experience corruption. But that distinction does not make the underlying enterprise risk insignificant.</p>
+
+      <h2>Windows and Cloud Synchronization Add Complexity</h2>
+
+      <p>Modern Windows environments increasingly combine local applications with cloud-backed storage. A file displayed in Windows File Explorer may involve local storage, cached content, synchronization state, or a cloud-backed representation.</p>
+
+      <p>Cowork introduces another layer.</p>
+
+      <p>Anthropic's current architecture documentation distinguishes between remote and local Cowork execution. Remote Cowork sessions run on Anthropic's infrastructure and can reach local files through the Claude Desktop application. Existing local desktop sessions can run the agent loop on the device, while code execution operates inside an isolated virtual machine. On Windows, that VM uses Hyper-V.</p>
+
+      <p>The isolation is useful, but it does not eliminate the risk created by authorized file access. Anthropic specifically notes that isolation limits where Claude's code runs, but does not limit what Claude can read or do through permissions that have been granted.</p>
+
+      <p>This means organizations need to evaluate the entire chain: AI agent, permissions, filesystem, synchronization layer, application, and system of record. A failure anywhere in that chain can affect the final result.</p>
+
+      <h2>This Is Bigger Than Claude</h2>
+
+      <p>The real issue is not whether Claude is better or worse than another AI product. It is the emergence of AI with operational write access.</p>
+
+      <p>The same governance questions apply to any agent that can modify documents, spreadsheets, source code, databases, CRM records, cloud storage, financial systems, or production environments.</p>
+
+      <p>Traditional AI governance has focused heavily on privacy, hallucinations, bias, cybersecurity, and regulatory compliance. Agentic AI adds another category: data integrity. If an AI system can change the underlying information, organizations need controls for what happens when that change is wrong.</p>
+
+      <h2>Treat AI Write Access as a Privileged Capability</h2>
+
+      <p>The answer is not necessarily to prohibit AI agents. It is to govern them more like privileged software.</p>
+
+      <p><strong>1. Use dedicated AI workspaces.</strong><br>Do not give an agent unrestricted access to an entire Documents folder. Anthropic itself recommends creating a dedicated working folder and being selective about what files Claude can access.</p>
+
+      <p><strong>2. Protect the original.</strong><br>Use version history, backups, snapshots, or controlled working copies for important information. The AI should not become the only path to the organization's last known-good version.</p>
+
+      <p><strong>3. Apply least privilege.</strong><br>If an agent only needs to read information, it should not automatically receive write access. If it needs to modify a working document, that does not necessarily mean it should be able to delete files or access unrelated directories.</p>
+
+      <p><strong>4. Verify important writes independently.</strong><br>Do not rely solely on the same agent to confirm that its own write succeeded. For higher-risk files, verification can include file-size checks, structural validation, formula checks, parsing, automated tests, or human review. The appropriate control should match the consequence of failure.</p>
+
+      <p><strong>5. Understand synchronization.</strong><br>OneDrive and other cloud-storage systems should be part of the AI risk assessment. Organizations need to understand how cloud-only files, local caching, synchronization, version history, and conflict resolution interact with AI tools that read and write files. The OneDrive Files-On-Demand report demonstrates why this matters.</p>
+
+      <p><strong>6. Monitor agent activity.</strong><br>Organizations need visibility into what their agents are doing. Anthropic currently states that Cowork activity is not captured in audit logs, the Compliance API, or data exports, although Team and Enterprise customers can stream Cowork events through OpenTelemetry. That should be considered during enterprise deployment and risk assessment.</p>
+
+      <h2>The Bottom Line</h2>
+
+      <p>Claude Cowork is not the story. The larger story is what happens when AI crosses the boundary from generating information to changing the environment in which that information lives.</p>
+
+      <p>Publicly reported Cowork bugs involving file truncation, Windows, and OneDrive provide a useful warning. Anthropic's own documentation reinforces the need for selective access, backups, appropriate oversight, and monitoring.</p>
+
+      <p>The lesson for enterprises is straightforward: do not treat AI write access as a convenience feature. Treat it as a privileged operational capability.</p>
+
+      <p>Because once an AI can modify the data, AI governance is no longer just about what the model says. It is about what the model does. And when it does something wrong, the organization needs to know: What changed? How do we know? Can we recover?</p>
+
+      <p>That is where responsible agentic AI begins.</p>
+
+      <h3>Sources & Further Reading</h3>
+      <ul>
+        <li>Anthropic, "Use Claude Cowork safely" — official guidance covering Cowork's file access, write and delete capabilities, dedicated working folders, backups, human oversight, and monitoring.</li>
+        <li>Anthropic, "Claude Cowork architecture overview" — official documentation covering remote and local execution, Windows virtualization, connected-folder access, permissions, and current audit and observability limitations.</li>
+        <li>Anthropic, "Use Claude Cowork on web, desktop, and mobile" — official documentation describing the current Cowork experience across platforms and the role of the Claude Desktop application in local file access.</li>
+        <li>Anthropic Claude Code GitHub Issue #53940 — public Windows Cowork bug report documenting reported silent file truncation involving Edit and Write tools.</li>
+        <li>Anthropic Claude Code GitHub Issue #62140 — public Windows and OneDrive Files-On-Demand bug report documenting a reported silent data-loss scenario.</li>
+      </ul>
+
+      <hr style="margin: 48px 0; border: none; border-top: 1px solid var(--line-soft);">
+
+      <div style="padding-top: 32px;">
+        <h3 style="margin-top: 0;">About North Velocity Group</h3>
+        <p>This article represents an independent North Velocity Group analysis of publicly available technology documentation, reported software issues, and other sources. The purpose is to provide strategic perspective on emerging enterprise AI and technology risks. It is not a statement that any particular product or technology is universally unsafe, and it is not legal, cybersecurity, or technical assurance advice. If your organization is building governance around AI systems with write access, <a href="/contact.html">let's talk</a>.</p>
+      </div>
+    </div>
+  </div>
+</article>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <span class="brand-word">NORTH VELOCITY GROUP</span>
+        <p class="footer-tag">Modernize. Align. Transform.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Company</h5>
+        <ul><li><a href="/about.html">About Us</a></li><li><a href="/about.html#approach">Our Approach</a></li></ul>
+      </div>
+      <div class="footer-col">
+        <h5>What We Do</h5>
+        <ul><li><a href="/what-we-do.html">Executive Advisory</a></li><li><a href="/what-we-do.html">Strategy & Projects</a></li><li><a href="/what-we-do.html">Transformation</a></li><li><a href="/what-we-do.html">Governance & Risk</a></li></ul>
+      </div>
+      <div class="footer-col">
+        <h5>Industries</h5>
+        <ul><li><a href="/industries.html">Financial Services</a></li><li><a href="/industries.html">Technology & SaaS</a></li><li><a href="/industries.html">Healthcare</a></li><li><a href="/industries.html">Private Equity</a></li></ul>
+      </div>
+      <div class="footer-col">
+        <h5>Connect</h5>
+        <ul><li><a href="/contact.html">Schedule a Consultation</a></li><li><a href="#">LinkedIn</a></li></ul>
+      </div>
+    </div>
+    <div class="hairline"></div>
+    <div class="footer-bottom">
+      <span>&copy; 2025 North Velocity Group. All rights reserved.</span>
+      <span><a href="/privacy-policy.html">Privacy Policy</a> &nbsp;·&nbsp; <a href="/terms-of-use.html">Terms of Use</a></span>
+    </div>
+  </div>
+</footer>
+
+<style>
+.article-single { padding: 80px 0; }
+.article-head { margin-bottom: 60px; max-width: 800px; }
+.article-head h1 { font-size: clamp(32px, 4vw, 56px); color: var(--stone); margin: 24px 0 0 0; line-height: 1.2; }
+.article-body { max-width: 720px; font-size: 16px; line-height: 1.8; color: var(--silver); }
+.article-body p { margin: 0 0 24px 0; }
+.article-body h2 { font-size: 28px; color: var(--stone); margin: 48px 0 24px 0; }
+.article-body h3 { font-size: 18px; color: var(--stone); margin: 32px 0 16px 0; }
+.article-body ul { margin: 24px 0; padding-left: 24px; }
+.article-body li { margin: 12px 0; }
+.article-body a { color: var(--gold); text-decoration: none; }
+.article-body a:hover { text-decoration: underline; }
+</style>
+
+<script>
+  const toggle = document.getElementById('navToggle');
+  const links = document.getElementById('navLinks');
+  toggle.addEventListener('click', () => {
+    const open = links.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', open);
+  });
+  links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    links.classList.remove('open');
+    toggle.setAttribute('aria-expanded', false);
+  }));
+</script>
+
+</body>
+</html>
