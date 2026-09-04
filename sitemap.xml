@@ -16,18 +16,14 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://northvelocitygroup.com/insights.html</loc>
-    <changefreq>weekly</changefreq>
+    <loc>https://northvelocitygroup.com/about.html</loc>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://northvelocitygroup.com/insights/hidden-infrastructure-cost-of-ai.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://northvelocitygroup.com/about.html</loc>
-    <changefreq>monthly</changefreq>
+    <loc>https://northvelocitygroup.com/insights.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
@@ -35,6 +31,61 @@
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
+
+  <url>
+    <loc>https://northvelocitygroup.com/insights/g20-innovation-ministerial-ai-industrial-strategy.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://northvelocitygroup.com/insights/g20-global-race-ai-leadership-north-carolina.html</loc>
+    <lastmod>2026-09-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://northvelocitygroup.com/insights/australia-g20-ai-strategy.html</loc>
+    <lastmod>2026-08-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://northvelocitygroup.com/insights/anthropic-ruling-ai-governance-g20.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://northvelocitygroup.com/insights/ai-agents-write-access-file-integrity-risk.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://northvelocitygroup.com/insights/ai-infrastructure-consolidation-playbook.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://northvelocitygroup.com/insights/from-severity-to-context-nist-nvd-ai-vulnerability-management.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://northvelocitygroup.com/insights/hidden-infrastructure-cost-of-ai-environmental.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://northvelocitygroup.com/insights/vietnam-high-risk-ai-classification-global-enterprises.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://northvelocitygroup.com/insights/who-pays-for-ai-global-governments-answer.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
   <url>
     <loc>https://northvelocitygroup.com/privacy-policy.html</loc>
     <changefreq>yearly</changefreq>
