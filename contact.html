@@ -226,6 +226,25 @@ input:focus, textarea:focus{ border-color:var(--gold); outline:none; }
     entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
   }, { threshold:0.12 });
   document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+  const contactForm = document.getElementById('contactForm');
+  const sendBtn = contactForm.querySelector('button[type="submit"]');
+  const sendLabel = sendBtn.firstChild;
+  const sendDefault = sendLabel.textContent;
+  contactForm.addEventListener('submit', () => {
+    sendBtn.disabled = true;
+    sendBtn.style.opacity = '0.7';
+    sendBtn.style.cursor = 'wait';
+    sendLabel.textContent = 'Sending, please wait';
+  });
+  window.addEventListener('pageshow', (e) => {
+    if (e.persisted) {
+      sendBtn.disabled = false;
+      sendBtn.style.opacity = '';
+      sendBtn.style.cursor = '';
+      sendLabel.textContent = sendDefault;
+    }
+  });
 </script>
 
 </body>
